@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>执行引擎概述 | 小覃学习日记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.d8212970.css" as="style"><link rel="preload" href="/assets/js/app.91dacd28.js" as="script"><link rel="preload" href="/assets/js/2.66ee15d0.js" as="script"><link rel="preload" href="/assets/js/28.1b1a3745.js" as="script"><link rel="prefetch" href="/assets/js/10.52509909.js"><link rel="prefetch" href="/assets/js/11.85a9f1ae.js"><link rel="prefetch" href="/assets/js/12.930f8204.js"><link rel="prefetch" href="/assets/js/13.d20e8de5.js"><link rel="prefetch" href="/assets/js/14.06ca350c.js"><link rel="prefetch" href="/assets/js/15.207268a7.js"><link rel="prefetch" href="/assets/js/16.fcbb90d3.js"><link rel="prefetch" href="/assets/js/17.252fe558.js"><link rel="prefetch" href="/assets/js/18.5ff9aaf3.js"><link rel="prefetch" href="/assets/js/19.94ff8eed.js"><link rel="prefetch" href="/assets/js/20.0f2a1fed.js"><link rel="prefetch" href="/assets/js/21.3a571bc1.js"><link rel="prefetch" href="/assets/js/22.eac9872b.js"><link rel="prefetch" href="/assets/js/23.4c3df0fd.js"><link rel="prefetch" href="/assets/js/24.6118b7bb.js"><link rel="prefetch" href="/assets/js/25.2e4448f7.js"><link rel="prefetch" href="/assets/js/26.4f2000b3.js"><link rel="prefetch" href="/assets/js/27.bf10e4a6.js"><link rel="prefetch" href="/assets/js/29.f0674464.js"><link rel="prefetch" href="/assets/js/3.68838683.js"><link rel="prefetch" href="/assets/js/30.3c38d898.js"><link rel="prefetch" href="/assets/js/31.bfd16474.js"><link rel="prefetch" href="/assets/js/4.0662ee1b.js"><link rel="prefetch" href="/assets/js/5.e8f5ed77.js"><link rel="prefetch" href="/assets/js/6.5cb95b34.js"><link rel="prefetch" href="/assets/js/7.1b054881.js"><link rel="prefetch" href="/assets/js/8.3c09e3be.js"><link rel="prefetch" href="/assets/js/9.b3cd05f9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d8212970.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小覃学习日记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link router-link-active">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link router-link-active">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/java/jvm/" aria-current="page" class="sidebar-link">概述</a></li><li><a href="/java/jvm/类加载子系统.html" class="sidebar-link">类加载子系统</a></li><li><a href="/java/jvm/运行时数据区.html" class="sidebar-link">运行时数据区</a></li><li><a href="/java/jvm/对象实例化及访问定位.html" class="sidebar-link">对象实例化及访问定位</a></li><li><a href="/java/jvm/执行引擎.html" class="active sidebar-link">执行引擎</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/jvm/执行引擎.html#执行引擎概述" class="sidebar-link">执行引擎概述</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/jvm/执行引擎.html#执行引擎的工作过程" class="sidebar-link">执行引擎的工作过程</a></li></ul></li><li class="sidebar-sub-header"><a href="/java/jvm/执行引擎.html#解释器、jit编译器" class="sidebar-link">解释器、JIT编译器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/jvm/执行引擎.html#热点代码及探测方式" class="sidebar-link">热点代码及探测方式</a></li></ul></li></ul></li><li><a href="/java/jvm/StringTable.html" class="sidebar-link">StringTable</a></li><li><a href="/java/jvm/jvm参数.html" class="sidebar-link">JVM参数汇总</a></li><li><a href="/java/jvm/jvm命令.html" class="sidebar-link">JVM调优命令</a></li><li><a href="/java/jvm/面试题.html" class="sidebar-link">面试题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="执行引擎概述"><a href="#执行引擎概述" class="header-anchor">#</a> 执行引擎概述</h2> <div class="language- extra-class"><pre><code>   +---------------------+
+   |                     |
+   |   JVM Execution     |
+   |     Engine          |
+   |                     |
+   +---------------------+
+              |
+              |              +-------------------+
+              +------------&gt; |  Interpreter      |
+              |              +-------------------+
+              |              |
+              |              |
+              |              |   +-------------------+
+              |              +-&gt; |  Just-In-Time     |
+              |                 |  (JIT) Compiler   |
+              |                 +-------------------+
+              |                 |
+              |                 |
+              |                 |   +-------------------+
+              |                 +-&gt; |  Garbage Collector|
+              |                    +-------------------+
+              |
+              |
+              |   +-------------------+
+              +-&gt; |  Native Interface |
+                  +-------------------+
+</code></pre></div><p>JVM（Java虚拟机）执行引擎是JVM的一个关键组件，负责执行Java字节码指令。它是将Java程序从源代码编译为可执行代码并运行的核心部分。</p> <p>JVM执行引擎主要有两个主要的组成部分：</p> <ol><li><p>解释器（Interpreter）：解释器负责逐条解释和执行Java字节码指令。它将字节码翻译成机器码，并在运行时逐条执行这些指令。解释器的优势是可以直接执行字节码，适用于较小的方法或冷启动时，但由于逐条解释执行的特性，执行速度相对较慢。</p></li> <li><p>即时编译器（Just-In-Time Compiler，JIT）：即时编译器将热点代码（被频繁执行的代码）动态地编译为本地机器码，以提高执行速度。JIT编译器会对方法进行分析，识别热点代码，并将其编译成高效的本地机器码。这样，热点代码在后续的执行中可以直接执行本地机器码，从而获得更高的执行性能。</p></li></ol> <p>JVM执行引擎在运行Java程序时起到关键作用。它通过解释器和即时编译器的组合，实现了Java程序的执行。解释器适用于快速启动和较小的方法，而即时编译器则提供了更高的执行效率，特别适用于热点代码的执行。JVM执行引擎的设计和优化对于Java程序的性能和执行效率至关重要。</p> <h3 id="执行引擎的工作过程"><a href="#执行引擎的工作过程" class="header-anchor">#</a> 执行引擎的工作过程</h3> <ol><li>执行引擎中执行的过程中究竟需要执行什么样的字节码指令完全依赖于PC寄存器</li> <li>每当执行完一项指令操作后，PC寄存器就会更新下一条需要被执行的指令地址</li> <li>当然方法中执行的过程中，执行引擎有可能会通过存储在局部变量表中的对象引用准确定位到存储中java堆中的对象实例信息，以及通过对象头中的元数据指针定位到目标对象的类型信息。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>java是半编译半解释型语言
+</code></pre></div><h2 id="解释器、jit编译器"><a href="#解释器、jit编译器" class="header-anchor">#</a> 解释器、JIT编译器</h2> <ul><li>解释器真正意义上所承担的角色就是一个运行时“翻译者”，将字节码文件中的内容翻译为对应平台的本地机器指令执行。当一条字节码指令被解释执行完成后，接着再根据PC寄存器中记录的下一条需要被执行的字节码指令执行解释操作。</li> <li>HotSpot VM是目前市面上高性能虚拟机的代表作之一，采用解释器和即时编译器并存的架构。在虚拟机运行时，解释器和即时编译器能相互协作，各自取长补短，尽力去选择合适的方式来权衡编译本地代码的时间和直接解释执行代码的时间：当虚拟机启动的时候，解释器可以首先发挥作用，不必等待即时编译器全部编译完成再执行，这样可以省去许多不必要的编译时间。并且随着程序运行时间的推移，即时编译器逐渐发挥作用，根据热点探测功能，将有价值的字节码编译为本地机器指令，以换取更高等的执行效率。</li></ul> <h3 id="热点代码及探测方式"><a href="#热点代码及探测方式" class="header-anchor">#</a> 热点代码及探测方式</h3> <p>是否需要启动JIT编译器将字节码直接编译为对应平台的机器指令，则需要根据代码被调用<strong>执行的频率</strong>而定，关于那些需要被编译为本地代码的字节码，也被称为“<strong>热点代码</strong>”。</p> <p>目前HotSpot VM采用的热点探测方式是基于计数器的热点探测。会给每一个方法建立2个不同类型的计数器，分别为方法调用计数器和回边计数器。方法计数器用于统计方法的调用次数，回边计数器用于统计循环体执行的循环次数。但是并不是统计的绝对次数，而是相对的执行频率，即一段时间之内方法被调用的次数，<strong>超过一段时间限度</strong>，还不满足交给JIT编译器，则调用计数器被减少一半，这个过程称为方法调用计数器热度的<strong>衰减</strong>，这段时间被称为此方法统计的<strong>半衰周期</strong>。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/16/2023, 10:32:11 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java/jvm/对象实例化及访问定位.html" class="prev">
+        对象实例化及访问定位
+      </a></span> <span class="next"><a href="/java/jvm/StringTable.html">
+        StringTable
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.91dacd28.js" defer></script><script src="/assets/js/2.66ee15d0.js" defer></script><script src="/assets/js/28.1b1a3745.js" defer></script>
+  </body>
+</html>

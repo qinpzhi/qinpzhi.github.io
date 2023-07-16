@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面试题 17.24. 最大子矩阵 | 小覃学习日记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.d8212970.css" as="style"><link rel="preload" href="/assets/js/app.91dacd28.js" as="script"><link rel="preload" href="/assets/js/2.66ee15d0.js" as="script"><link rel="preload" href="/assets/js/17.252fe558.js" as="script"><link rel="prefetch" href="/assets/js/10.52509909.js"><link rel="prefetch" href="/assets/js/11.85a9f1ae.js"><link rel="prefetch" href="/assets/js/12.930f8204.js"><link rel="prefetch" href="/assets/js/13.d20e8de5.js"><link rel="prefetch" href="/assets/js/14.06ca350c.js"><link rel="prefetch" href="/assets/js/15.207268a7.js"><link rel="prefetch" href="/assets/js/16.fcbb90d3.js"><link rel="prefetch" href="/assets/js/18.5ff9aaf3.js"><link rel="prefetch" href="/assets/js/19.94ff8eed.js"><link rel="prefetch" href="/assets/js/20.0f2a1fed.js"><link rel="prefetch" href="/assets/js/21.3a571bc1.js"><link rel="prefetch" href="/assets/js/22.eac9872b.js"><link rel="prefetch" href="/assets/js/23.4c3df0fd.js"><link rel="prefetch" href="/assets/js/24.6118b7bb.js"><link rel="prefetch" href="/assets/js/25.2e4448f7.js"><link rel="prefetch" href="/assets/js/26.4f2000b3.js"><link rel="prefetch" href="/assets/js/27.bf10e4a6.js"><link rel="prefetch" href="/assets/js/28.1b1a3745.js"><link rel="prefetch" href="/assets/js/29.f0674464.js"><link rel="prefetch" href="/assets/js/3.68838683.js"><link rel="prefetch" href="/assets/js/30.3c38d898.js"><link rel="prefetch" href="/assets/js/31.bfd16474.js"><link rel="prefetch" href="/assets/js/4.0662ee1b.js"><link rel="prefetch" href="/assets/js/5.e8f5ed77.js"><link rel="prefetch" href="/assets/js/6.5cb95b34.js"><link rel="prefetch" href="/assets/js/7.1b054881.js"><link rel="prefetch" href="/assets/js/8.3c09e3be.js"><link rel="prefetch" href="/assets/js/9.b3cd05f9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d8212970.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小覃学习日记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link router-link-active">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link router-link-active">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>动态规划</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/algorithm/code/1547.html" class="sidebar-link">切棍子的最小成本</a></li><li><a href="/algorithm/code/2713.html" class="sidebar-link">矩阵中严格递增的单元格数</a></li><li><a href="/algorithm/code/面试题17.24.最大子矩阵.html" class="active sidebar-link">最大子矩阵</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>并查集</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>倒排索引</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>图论</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>字典树</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="面试题-17-24-最大子矩阵"><a href="#面试题-17-24-最大子矩阵" class="header-anchor">#</a> 面试题 17.24. 最大子矩阵</h3> <p><strong>难度：困难</strong></p> <p>给定一个正整数、负整数和 0 组成的 N × M 矩阵，编写代码找出元素总和最大的子矩阵。</p> <p>返回一个数组 <code>[r1, c1, r2, c2]</code>，其中 <code>r1</code>, <code>c1</code> 分别代表子矩阵左上角的行号和列号，<code>r2</code>, <code>c2</code> 分别代表右下角的行号和列号。若有多个满足条件的子矩阵，返回任意一个均可。</p> <p>**注意：**本题相对书上原题稍作改动</p> <p><strong>示例：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：
+[
+   [-1,0],
+   [0,-1]
+]
+输出：[0,1,0,1]
+解释：输入中标粗的元素即为输出所表示的矩阵
+</code></pre></div><p><strong>说明：</strong></p> <ul><li><code>1 &lt;= matrix.length, matrix[0].length &lt;= 200</code></li></ul> <p>思路：</p> <p>可以先思考一个问题，如果是一位数组，有负数和正数，求连续区间sum值最大，怎么做？只需要遍历一次。</p> <ul><li><p>虽然这道题是二维数组，但是注意到每个子矩阵的上下边界都是固定的, 所以我们可以将它们<strong>挤压到一行</strong>, 这样就形成了一维数组。</p></li> <li><p>使用二重循环, 外层遍历上边界, 内层遍历下边界</p></li> <li><p>然后维护一个长度为列数的数组, 每遍历一个下边界, 就将其值累加到那个数组中</p></li> <li><p>最后针对那个数组, 求连续子数组的最大和即可</p></li> <li><p>假设当前以 i 结尾的最大和是 sum, 那么到 i+1 的时候, 以它结尾的最大和可以有两种选择:</p></li> <li><ul><li>在 sm 的基础上加上 i+1 的值</li> <li>也可以另起炉灶, 从 i+1 开始计算 (对应的是 <code>sum &lt; 0</code> 的情况)</li></ul></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getMaxMatrix</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> m<span class="token operator">=</span>matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n<span class="token operator">=</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> r1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> c1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> res<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> maxSum<span class="token operator">=</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cols<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span>i<span class="token punctuation">;</span>j<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">int</span> sum<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    cols<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">+=</span>matrix<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>sum<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span>
+                        sum<span class="token operator">+=</span>cols<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">else</span><span class="token punctuation">{</span>
+                        r1<span class="token operator">=</span>i<span class="token punctuation">;</span>c1<span class="token operator">=</span>k<span class="token punctuation">;</span>
+                        sum<span class="token operator">=</span>cols<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>sum<span class="token operator">&gt;</span>maxSum<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        res<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>r1<span class="token punctuation">,</span>c1<span class="token punctuation">,</span>j<span class="token punctuation">,</span>k<span class="token punctuation">}</span><span class="token punctuation">;</span>
+                        maxSum<span class="token operator">=</span>sum<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/5/2023, 10:47:01 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/algorithm/code/2713.html" class="prev">
+        矩阵中严格递增的单元格数
+      </a></span> <span class="next"><a href="/algorithm/code/2709.html">
+        最大公约数遍历
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.91dacd28.js" defer></script><script src="/assets/js/2.66ee15d0.js" defer></script><script src="/assets/js/17.252fe558.js" defer></script>
+  </body>
+</html>

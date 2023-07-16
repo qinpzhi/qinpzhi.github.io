@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>String的基本特性 | 小覃学习日记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.d8212970.css" as="style"><link rel="preload" href="/assets/js/app.91dacd28.js" as="script"><link rel="preload" href="/assets/js/2.66ee15d0.js" as="script"><link rel="preload" href="/assets/js/23.4c3df0fd.js" as="script"><link rel="prefetch" href="/assets/js/10.52509909.js"><link rel="prefetch" href="/assets/js/11.85a9f1ae.js"><link rel="prefetch" href="/assets/js/12.930f8204.js"><link rel="prefetch" href="/assets/js/13.d20e8de5.js"><link rel="prefetch" href="/assets/js/14.06ca350c.js"><link rel="prefetch" href="/assets/js/15.207268a7.js"><link rel="prefetch" href="/assets/js/16.fcbb90d3.js"><link rel="prefetch" href="/assets/js/17.252fe558.js"><link rel="prefetch" href="/assets/js/18.5ff9aaf3.js"><link rel="prefetch" href="/assets/js/19.94ff8eed.js"><link rel="prefetch" href="/assets/js/20.0f2a1fed.js"><link rel="prefetch" href="/assets/js/21.3a571bc1.js"><link rel="prefetch" href="/assets/js/22.eac9872b.js"><link rel="prefetch" href="/assets/js/24.6118b7bb.js"><link rel="prefetch" href="/assets/js/25.2e4448f7.js"><link rel="prefetch" href="/assets/js/26.4f2000b3.js"><link rel="prefetch" href="/assets/js/27.bf10e4a6.js"><link rel="prefetch" href="/assets/js/28.1b1a3745.js"><link rel="prefetch" href="/assets/js/29.f0674464.js"><link rel="prefetch" href="/assets/js/3.68838683.js"><link rel="prefetch" href="/assets/js/30.3c38d898.js"><link rel="prefetch" href="/assets/js/31.bfd16474.js"><link rel="prefetch" href="/assets/js/4.0662ee1b.js"><link rel="prefetch" href="/assets/js/5.e8f5ed77.js"><link rel="prefetch" href="/assets/js/6.5cb95b34.js"><link rel="prefetch" href="/assets/js/7.1b054881.js"><link rel="prefetch" href="/assets/js/8.3c09e3be.js"><link rel="prefetch" href="/assets/js/9.b3cd05f9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d8212970.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小覃学习日记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link router-link-active">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="java学习" class="dropdown-title"><span class="title">java学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="java学习" class="mobile-dropdown-title"><span class="title">java学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/java/jvm/" class="nav-link router-link-active">
+  jvm学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/thought/" class="nav-link">
+  算法思想
+</a></li><li class="dropdown-item"><!----> <a href="/algorithm/code/" class="nav-link">
+  算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  作者
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/java/jvm/" aria-current="page" class="sidebar-link">概述</a></li><li><a href="/java/jvm/类加载子系统.html" class="sidebar-link">类加载子系统</a></li><li><a href="/java/jvm/运行时数据区.html" class="sidebar-link">运行时数据区</a></li><li><a href="/java/jvm/对象实例化及访问定位.html" class="sidebar-link">对象实例化及访问定位</a></li><li><a href="/java/jvm/执行引擎.html" class="sidebar-link">执行引擎</a></li><li><a href="/java/jvm/StringTable.html" aria-current="page" class="active sidebar-link">StringTable</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/java/jvm/StringTable.html#string的基本特性" class="sidebar-link">String的基本特性</a></li><li class="sidebar-sub-header"><a href="/java/jvm/StringTable.html#字符串的内存分配" class="sidebar-link">字符串的内存分配</a></li><li class="sidebar-sub-header"><a href="/java/jvm/StringTable.html#字符串的拼接操作" class="sidebar-link">字符串的拼接操作</a></li><li class="sidebar-sub-header"><a href="/java/jvm/StringTable.html#intern-的使用" class="sidebar-link">intern()的使用</a></li></ul></li><li><a href="/java/jvm/jvm参数.html" class="sidebar-link">JVM参数汇总</a></li><li><a href="/java/jvm/jvm命令.html" class="sidebar-link">JVM调优命令</a></li><li><a href="/java/jvm/面试题.html" class="sidebar-link">面试题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="string的基本特性"><a href="#string的基本特性" class="header-anchor">#</a> String的基本特性</h2> <ul><li>String实现了Serializeable接口：表示字符串是支持序列号的，实现了Comparable接口：表示String可以比较大小</li> <li>String在jdk8及以前内部定了final char[] vlaue用于存储字符串数据，jdk9时改成了byte[]，节约了空间</li> <li>String代表不可变的字符序列，简称不可变性。</li> <li>字符串常量池中是不会存储相同内容的字符串的。</li></ul> <h2 id="字符串的内存分配"><a href="#字符串的内存分配" class="header-anchor">#</a> 字符串的内存分配</h2> <p>java6以前，字符串常量池存放在永久代，java7,字符串常量池的位置调整到java堆中，java8元空间，字符串常量池在堆中。将String对象存储在堆中可以灵活管理对象的生命周期、实现字符串共享和垃圾回收，以及适应动态长度的需求。</p> <h2 id="字符串的拼接操作"><a href="#字符串的拼接操作" class="header-anchor">#</a> 字符串的拼接操作</h2> <ul><li>常量与常量的拼接结果在常量池，原理是编译器优化</li> <li>常量池中不会存在相同内容的常量</li> <li>只要其中一个是变量，结果就在堆中，变量拼接的原理是StringBuilder</li> <li>如果拼接的结果调用intern()方法，则主动将常量池中还没有的字符串对象放入池中，并返回此对象地址。</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">String</span> s1<span class="token operator">=</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s2<span class="token operator">=</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s3<span class="token operator">=</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">/*
+如下的s1+s2的细节：
+①StringBuilder s=new StringBuilder();
+②s.append(&quot;a&quot;);
+③s.append(&quot;b&quot;)；
+④s.toString();  --&gt;类似于 new String(&quot;ab&quot;)
+*/</span>
+<span class="token class-name">String</span> s4<span class="token operator">=</span>s1<span class="token operator">+</span>s2<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s3<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token comment">//false</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">final</span> <span class="token class-name">String</span> s1<span class="token operator">=</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> s2<span class="token operator">=</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s3<span class="token operator">=</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">/*
+字符串拼接操作不一定使用的是StringBuilder
+如果拼接符号左右都是字符串常量或者常量引用，则仍然使用编译器优化，即非StringBuilder得方式
+针对final修饰类、方法、基本数据类型、引用数据类型的量的结构时，能使用上final的时候建议使用上
+*/</span>
+<span class="token class-name">String</span> s4<span class="token operator">=</span>s1<span class="token operator">+</span>s2<span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s3<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token comment">//true</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/*
+通过StringBuilder的append()的方式添加字符串的效率要远高于使用String的字符串拼接方式！
+详情：
+①StringBuilder的append()的方法的时候，只需要建立一次StringBuilder对象，使用String的字符串拼接方式：创建多个StringBuilder和String对象
+②使用String的字符串拼接方式：内存中由于创建了较多的StringBuilder对象和String对象，内存占用更大，如果进行GC，需要花费额外的时间。
+改进的空间：
+在实际开发中，如果基本确定前前后后添加的字符串长度不高于某个限定值highLevel情况下，建议使用构造器实例化：StringBuilder s= new StringBuilder(highLevel);
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">plusStr</span><span class="token punctuation">(</span><span class="token keyword">int</span> times<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token class-name">String</span> s1<span class="token operator">=</span><span class="token string">&quot;beijing&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>times<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    s1<span class="token operator">+=</span><span class="token string">&quot;beijing&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">StringBuilderPlusStr</span><span class="token punctuation">(</span><span class="token keyword">int</span> times<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token class-name">StringBuilder</span> stringBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token string">&quot;beijing&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>times<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    stringBuilder<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;beijing&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="intern-的使用"><a href="#intern-的使用" class="header-anchor">#</a> intern()的使用</h2> <p>intern方法会从字符串常量池中查询当前字符串是否存在，如果不存在就会将当前字符串放入常量池中。对于程序中大量存在的字符串，尤其存在很多重复字符串的时候，使用intern() 能节省很多空间。因为堆里的对象没有引用会自动回收。</p> <p>jdk1.6中，将这个字符串对象尝试放入串池。如果字符串常量池有，则不会放入，返回有的常量池中的对象地址。如果没有，则把此对象复制一份，放入串池，并返回串池中的对象地址。
+jdk1.7起，将这个字符串对象尝试放入串池。如果字符串常量池有，则不会放入，返回有的常量池中的对象地址。如果没有，则把对象的引用地址复制一份，放入串池，并返回串池中的引用地址。</p> <p>如果保证变量S指向的是字符串常量池中的数据呢？
+方法一：String s=&quot;aaa&quot;;//字面量定义的方式
+方法二：调用intern()方法，不用管前面啥方式。
+String s=new String(&quot;dd&quot;).intern();
+String s=new StringBuilder(&quot;dd&quot;).toString().intern();</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span>会创建几个对象？
+看字节码就知道，创建了两个。
+一个对象是<span class="token keyword">new</span>关键字在堆空间创建的，另外一个对象是常量池中的对象。
+堆中创建了对象：<span class="token keyword">new</span> <span class="token class-name">String</span>
+常量池中放入了<span class="token string">&quot;ab&quot;</span>
+  
+<span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">)</span>呢？
+对象<span class="token number">1</span>：<span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+对象<span class="token number">2</span>： <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span>
+对象<span class="token number">3</span>：常量池的<span class="token string">&quot;a&quot;</span>
+对象<span class="token number">4</span>：<span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">)</span>
+对象<span class="token number">5</span>：常量池的<span class="token string">&quot;b&quot;</span>
+深入剖析，<span class="token class-name">StringBuilder</span>的<span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法
+  对象<span class="token number">6</span>：<span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span>
+强调一下，<span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>的调用，在字符串常量池中，没有生成”ab&quot;
+  
+<span class="token class-name">String</span> s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+s<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//调用此方法之前，字符串常量池中已经存在”1“</span>
+<span class="token class-name">String</span> s2<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token operator">==</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>jdk6<span class="token operator">:</span><span class="token boolean">false</span>  jdk7<span class="token operator">/</span><span class="token number">8</span><span class="token operator">:</span><span class="token boolean">false</span>
+
+  
+<span class="token class-name">String</span> s3<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//s3变量的地址为：new String(&quot;11&quot;)</span>
+<span class="token comment">//执行完上一行代码以后，字符串常量池中没有”11“</span>
+s3<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在字符串常量池中生成”11“。如何理解：jdk6创建了一个新的对象”11“,也就有新的地址，</span>
+<span class="token comment">//jdk7:此时常量池中并没有创建“11”,而是创建了一个指向堆空间中对象“11”的地址  </span>
+<span class="token class-name">String</span> s4<span class="token operator">=</span><span class="token string">&quot;11&quot;</span><span class="token punctuation">;</span><span class="token comment">//使用的是上一行代码执行时，在常量池中生成的”11“的地址</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s3<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//jdk6:false  jdk7/8:true</span>
+
+
+<span class="token class-name">String</span> s3<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s4<span class="token operator">=</span><span class="token string">&quot;11&quot;</span><span class="token punctuation">;</span><span class="token comment">//在字符串常量池中生成了对象“11”</span>
+<span class="token class-name">String</span> s5<span class="token operator">=</span>s3<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s3<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//jdk7/8:false</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s5<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true  </span>
+
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">String</span> s<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;b&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s2<span class="token operator">=</span>s<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s2<span class="token operator">==</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//jdk6:true  jdk7/8:true</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token operator">==</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//jdk6:false  jdk7/8:true</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">String</span> s1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在常量池中会生成ab</span>
+s1<span class="token punctuation">.</span><span class="token function">intern</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s2<span class="token operator">=</span><span class="token string">&quot;ab&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s1<span class="token operator">==</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//false</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/16/2023, 10:32:11 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/java/jvm/执行引擎.html" class="prev">
+        执行引擎
+      </a></span> <span class="next"><a href="/java/jvm/jvm参数.html">
+        JVM参数汇总
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.91dacd28.js" defer></script><script src="/assets/js/2.66ee15d0.js" defer></script><script src="/assets/js/23.4c3df0fd.js" defer></script>
+  </body>
+</html>
